@@ -1,0 +1,9 @@
+.icon {
+  background-color: #1f2937;
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+
+.icon:hover {
+  transform: scale(1.15);
+}

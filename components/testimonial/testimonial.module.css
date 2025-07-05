@@ -1,0 +1,62 @@
+.container {
+  background-color: var(--card);
+  border: 1px solid #333;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  gap: 2.4rem;
+  border-radius: 1.2rem;
+  transition: all 0.3s;
+}
+
+.container:hover {
+  transform: scale(1.03);
+  border: 1px solid var(--hover-border);
+  box-shadow: 0 0 15px 2px rgba(251, 191, 36, 0.6);
+}
+
+.stars {
+  display: flex;
+}
+
+.star {
+  color: var(--hover);
+  font-size: 2.4rem;
+  margin-left: -0.2rem;
+}
+
+.description {
+  font-style: italic;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+
+.author {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.img {
+  border-radius: 50%;
+}
+
+.authorInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.name {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.position {
+  color: var(--text-secondary);
+  font-size: 1.4rem;
+}

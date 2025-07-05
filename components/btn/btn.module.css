@@ -1,0 +1,28 @@
+.btn {
+  padding: 1rem 0rem;
+  width: 20rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  border-radius: 10000rem;
+}
+
+.btn:first-child {
+  flex-direction: row-reverse;
+}
+
+.btn p {
+  color: #000;
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+
+.cta {
+  background: var(--accent);
+}
+
+.secondary {
+  background: var(--text);
+}

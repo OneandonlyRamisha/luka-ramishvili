@@ -1,42 +1,73 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  --hero-bg: linear-gradient(135deg, #111827 0%, #1f2937 50%, #111827 100%);
+  --bg: #18202f;
+  --secondary-bg: #111827;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+  --card: #141c2b;
+  --elements: #283040;
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
+  --text: #fff;
+  --text-secondary: #9ca3af;
+  --accent: linear-gradient(90deg, #fbbf24 0%, #f59e0b 100%);
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --hover: #fbbf24;
+  --hover-border: rgba(251, 191, 36, 0.5);
 }
 
 * {
-  box-sizing: border-box;
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-inter), sans-serif;
 }
 
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+button,
+ul,
+li,
 a {
-  color: inherit;
-  text-decoration: none;
+  all: unset;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+a,
+button {
+  cursor: pointer;
 }
+
+section {
+  padding: 6.4rem min(12.4rem, 9%);
+}
+
+h1,
+h3,
+h4,
+h5,
+h6,
+p,
+li {
+  color: var(--text);
+}
+
+h2 {
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+  color: var(--text);
+}
+
+h6 {
+  font-size: clamp(1.6rem, 2.4vw, 2rem);
+  font-weight: 400;
+  line-height: 1.6;
+  text-align: center;
+  color: var(--text-secondary);
+  max-width: 78ch;
+  margin: 0 auto;
+}
+
+/*use h2 as header and h6 as a sub header*/
