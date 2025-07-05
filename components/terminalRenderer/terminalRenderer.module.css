@@ -1,0 +1,249 @@
+/* terminalRenderer.module.css */
+
+/* Shared */
+.outputSection {
+  margin-top: 2rem;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #121212;
+  box-shadow: 0 0 5px rgba(116, 233, 49, 0.15);
+  font-size: 1.3rem;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.outputSection p {
+  margin: 0.5rem 0;
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  color: var(--text-secondary-terminal);
+  margin-bottom: 1rem;
+  border-left: 3px solid #74e931;
+  padding-left: 0.7rem;
+  font-weight: bold;
+}
+
+.textOutput {
+  color: var(--text-terminal);
+  font-style: italic;
+}
+
+.errorOutput {
+  color: #e64545;
+  font-weight: bold;
+}
+
+.commandLine {
+  color: #74e931;
+  font-family: monospace;
+}
+
+/* Profile */
+.profileBox {
+  background-color: #1e1e1e;
+  padding: 1rem;
+  border-radius: 6px;
+  border-left: 4px solid #74e931;
+}
+.profileBox p {
+  margin: 0.3rem 0;
+}
+
+/* Skills */
+.skillsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.skillCategory {
+  flex: 1 1 40%;
+}
+.skillLabel {
+  color: var(--text-secondary-terminal);
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  border-bottom: 1px dashed #74e931;
+  padding-bottom: 0.3rem;
+}
+.skillList {
+  list-style: none;
+  padding: 0;
+}
+.skillItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.3rem 0;
+  color: var(--text);
+}
+
+/* Projects */
+.projectsGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  cursor: pointer;
+  z-index: 1000;
+}
+.projectItem {
+  padding: 1.5rem;
+  background-color: #141414;
+  border-left: 4px solid #74e931;
+  border-radius: 8px;
+  transition: transform 0.2s;
+  z-index: 10000;
+  cursor: pointer;
+}
+.projectItem:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 10px rgba(116, 233, 49, 0.2);
+}
+.projectHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.5rem;
+}
+.projectIndex {
+  color: #74e931;
+  font-weight: bold;
+}
+.projectTitle {
+  font-size: 1.5rem;
+  color: var(--text-secondary-terminal);
+}
+.projectDescription {
+  margin: 0.5rem 0;
+  color: var(--text);
+}
+.projectTech {
+  font-size: 1.1rem;
+  color: #aaa;
+}
+.projectMeta {
+  font-size: 1rem;
+  color: #888;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Contact */
+.contactCard {
+  background-color: #1a1a1a;
+  padding: 1rem 1.5rem;
+  border-radius: 6px;
+  border-left: 4px solid #74e931;
+}
+.contactCard p {
+  margin: 0.3rem 0;
+  color: var(--text);
+}
+.contactCard p strong {
+  color: var(--text-secondary-terminal);
+}
+
+/* Animation */
+.typewriterText {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #74e931;
+  animation: typing 2s steps(30, end), blink 0.75s step-end infinite;
+  font-family: monospace;
+  color: var(--text-terminal);
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #74e931;
+  }
+}
+
+/* Output container fade */
+.outputSection {
+  animation: fadeIn 0.4s ease-in;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Optional highlight commands */
+.highlight {
+  color: #74e931;
+  font-weight: bold;
+  font-family: monospace;
+}
+
+.cursor {
+  animation: blink 1s infinite;
+  color: #74e931;
+  font-weight: bold;
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .outputSection {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.4rem;
+  }
+
+  .textOutput,
+  .errorOutput,
+  .commandLine {
+    font-size: 1.2rem;
+  }
+
+  .profileBox,
+  .contactCard,
+  .projectItem {
+    padding: 0.8rem;
+    border-radius: 6px;
+  }
+
+  .skillLabel {
+    font-size: 1.2rem;
+  }
+
+  .projectTitle {
+    font-size: 1.4rem;
+  }
+}

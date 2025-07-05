@@ -1,0 +1,15 @@
+.welcome {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1rem;
+  color: #74e931;
+  line-height: 1.2;
+  letter-spacing: 0;
+  white-space: pre-wrap;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 1000px) {
+  .welcome {
+    display: none;
+  }
+}
