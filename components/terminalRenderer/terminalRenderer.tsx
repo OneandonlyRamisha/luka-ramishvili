@@ -14,7 +14,7 @@ export type CommandOutputItem =
 
 interface Props {
   output: CommandOutputItem[];
-  scrollRef?: React.RefObject<HTMLDivElement> | any;
+  scrollRef?: React.MutableRefObject<HTMLDivElement | null>;
 }
 
 interface TypewriterState {
