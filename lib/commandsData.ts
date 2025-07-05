@@ -1,4 +1,10 @@
-export const commandData = [
+import { CommandOutputItem } from "@/components/terminalRenderer/terminalRenderer";
+interface CommandEntry {
+  command: string;
+  output: CommandOutputItem[];
+}
+
+export const commandData: CommandEntry[] = [
   {
     command: "help",
     output: [
@@ -39,7 +45,7 @@ export const commandData = [
               "Full-stack React/Node.js application with payment integration",
             tech: ["React", "Node.js", "PostgreSQL", "Stripe API"],
             status: "Production",
-            users: "10k+",
+            users: 10000, // ✅ fixed
             link: "www.ramiforza.com",
           },
           {
@@ -56,7 +62,7 @@ export const commandData = [
             description: "VS Code extension for intelligent code completion",
             tech: ["TypeScript", "OpenAI API", "VS Code API"],
             status: "Development",
-            downloads: "1.2k",
+            downloads: 1200, // ✅ fixed
             link: "www.ramiforza.com",
           },
         ],

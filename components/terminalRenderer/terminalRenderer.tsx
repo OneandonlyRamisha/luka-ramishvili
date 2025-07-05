@@ -1,20 +1,78 @@
 import React, { useEffect, useState, useLayoutEffect } from "react";
 import styles from "./terminalRenderer.module.css";
 
-interface CommandOutputItem {
-  type: string;
-  content: any;
-}
+// interface CommandOutputItem {
+//   type: string;
+//   content: any;
+// }
+export type CommandOutputItem =
+  | TextItem
+  | ProfileItem
+  | ContactItem
+  | ProjectListItem
+  | SkillsItem;
 
 interface Props {
   output: CommandOutputItem[];
-  scrollRef?: any;
+  scrollRef?: React.MutableRefObject<HTMLDivElement | null>;
 }
 
 interface TypewriterState {
   itemIndex: number;
   charIndex: number;
   isComplete: boolean;
+}
+
+interface Project {
+  name: string;
+  description: string;
+  tech?: string[];
+  link: string;
+  status?: string;
+  users?: number;
+  contributors?: number;
+  downloads?: number;
+}
+interface ProjectListItem {
+  type: "projectList";
+  content: Project[];
+}
+
+// 5. Skills blocks
+interface SkillsItem {
+  type: "skills";
+  content: {
+    languages?: { name: string; level: string }[];
+    frameworks?: { name: string; level: string }[];
+    databases?: { name: string; level: string }[];
+    tools?: { name: string; level: string }[];
+  };
+}
+
+// 1. Simple text‐style items
+interface TextItem {
+  type: "text" | "error" | "command";
+  content: string;
+}
+
+// 2. Profile blocks
+interface ProfileItem {
+  type: "profile";
+  content: { name: string; role: string; location: string; bio: string };
+}
+
+// 3. Contact blocks
+interface ContactItem {
+  type: "contact";
+  content: {
+    email: string;
+    linkedin: string;
+    github: string;
+    twitter: string;
+    phone: string;
+    availability: string;
+    message: string;
+  };
 }
 
 export const TerminalRenderer = ({ output, scrollRef }: Props) => {
@@ -202,7 +260,7 @@ export const TerminalRenderer = ({ output, scrollRef }: Props) => {
       if (!item.content || !Array.isArray(item.content)) return null;
       return (
         <div key={i} className={styles.projectsGrid}>
-          {item.content.map((project: any, index: number) => (
+          {item.content.map((project: Project, index: number) => (
             <div
               onClick={() => window.open(project.link, "_blank")}
               key={index}
@@ -236,7 +294,10 @@ export const TerminalRenderer = ({ output, scrollRef }: Props) => {
       if (!item.content) return null;
       const { languages, frameworks, databases, tools } = item.content;
 
-      const renderSkillBlock = (title: string, skills: any[]) => {
+      const renderSkillBlock = (
+        title: string,
+        skills?: { name: string; level: string }[]
+      ) => {
         if (!skills || !Array.isArray(skills)) return null;
         return (
           <div className={styles.skillCategory}>
