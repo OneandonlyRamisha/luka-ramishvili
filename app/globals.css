@@ -9,6 +9,8 @@
   --text: #fff;
   --text-secondary: #9ca3af;
   --accent: linear-gradient(90deg, #fbbf24 0%, #f59e0b 100%);
+  --text-terminal: #74e931;
+  --text-secondary-terminal: #fec036;
 
   --hover: #fbbf24;
   --hover-border: rgba(251, 191, 36, 0.5);
