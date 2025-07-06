@@ -49,9 +49,11 @@ export default function ProjectComponent({
         <Image
           src={imgUrl}
           alt={alt}
-          width={100}
-          height={100}
+          width={1920}
+          height={1080}
           className={styles.img}
+          priority
+          quality={100}
         />
       </div>
       <div className={styles.contentContainer}>

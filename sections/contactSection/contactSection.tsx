@@ -29,14 +29,14 @@ export default function ContactSection() {
           </p>
           <LinkItem
             name="Email"
-            cta="lukaramisha@gmail.com"
-            href={`mailto:lukaramisha@gmail.com`}
+            cta="ramishvililukawork@gmail.com"
+            href={`mailto:ramishvililukawork@gmail.com`}
             icon={<MdMailOutline size={25} color="#000" />}
           />
           <LinkItem
             name="LinkedIn"
             cta="Connect with me"
-            href="linkedin.com"
+            href="https://www.linkedin.com/in/luka-ramishvili-329352373/"
             icon={<SlSocialLinkedin size={25} color="#000" />}
           />
         </div>

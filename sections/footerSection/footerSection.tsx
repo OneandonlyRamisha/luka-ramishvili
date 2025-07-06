@@ -4,7 +4,7 @@ import { FaRegHeart } from "react-icons/fa";
 import SocialItem from "@/components/socialItems/socialItems";
 import { LuGithub } from "react-icons/lu";
 import { FiLinkedin } from "react-icons/fi";
-import { AiOutlineInstagram } from "react-icons/ai";
+import { FaXTwitter } from "react-icons/fa6";
 
 export default function FooterSection() {
   return (
@@ -20,15 +20,15 @@ export default function FooterSection() {
       <div className={styles.socialsContainer}>
         <SocialItem
           icon={<LuGithub className={styles.icon} />}
-          href="www.github.com"
+          href="https://github.com/OneandonlyRamisha"
         />
         <SocialItem
           icon={<FiLinkedin className={styles.icon} />}
-          href="www.linkedin.com"
+          href="https://www.linkedin.com/in/luka-ramishvili-329352373/"
         />
         <SocialItem
-          icon={<AiOutlineInstagram className={styles.icon} />}
-          href="www.instagram.com"
+          icon={<FaXTwitter className={styles.icon} />}
+          href="https://x.com/LukaRamishvili_"
         />
       </div>
       <div className={styles.copyrightContainer}>
