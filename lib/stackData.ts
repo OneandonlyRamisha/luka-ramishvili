@@ -13,7 +13,7 @@ export const stackData = [
     alt: "React Logo",
   },
   {
-    img: "/icons/Next.js.svg",
+    img: "/icons/icons8-next.js.svg",
     name: "Next JS",
     category: "Framework",
     alt: "Next js Logo",
@@ -49,7 +49,7 @@ export const stackData = [
     alt: "git Logo",
   },
   {
-    img: "/icons/GitHub.svg",
+    img: "/icons/icons8-github.svg",
     name: "GitHub",
     category: "Tools",
     alt: "github Logo",
@@ -61,7 +61,7 @@ export const stackData = [
     alt: "framer motion Logo",
   },
   {
-    img: "/icons/Vercel.svg",
+    img: "/icons/Logoa.svg",
     name: "Vercel",
     category: "Deployment",
     alt: "vercel Logo",
