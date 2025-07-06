@@ -75,6 +75,7 @@ export default function ProjectsSection() {
           <a
             href="https://github.com/OneandonlyRamisha"
             className={styles.gitCta}
+            target="_blank"
           >
             <LuGithub color="#000" fontSize={20} />
             <p>View All Projects On GitHub</p>

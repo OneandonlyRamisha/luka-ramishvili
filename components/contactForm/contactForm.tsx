@@ -6,7 +6,7 @@ export default function ContactForm() {
     <div className={styles.container}>
       <h4 className={styles.header}>Send a Message</h4>
       <form
-        action="https://formsubmit.co/liziramishvilicello@gmail.com"
+        action="https://formsubmit.co/8b9e5c3fb178473896a57319d68d91d7"
         method="POST"
         className={styles.form}
       >
